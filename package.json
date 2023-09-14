@@ -1,6 +1,6 @@
 {
 	"name": "ts-autocomplete",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Autocomplete with Typescript",
 	"main": "dist/ts-autocomplete.js",
 	"types": "dist/ts-autocomplete.d.ts",

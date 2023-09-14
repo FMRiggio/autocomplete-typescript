@@ -98,7 +98,8 @@ export default class TsAutocomplete {
                 item.innerHTML += items[key].substring(value.length);
                 item.innerHTML += '<input type="hidden" value="' + key + '" data-label="' + items[key] + '">';
                 item.addEventListener('click', (ev) => {
-                    this.inputElement.value = ev.target.querySelector('input').dataset.label;
+                    const $input = ev.target.querySelector('input');
+                    this.inputElement.value = ($input ? $input.dataset.label : '');
                     this.onSelect(ev.target.querySelector('input').value);
                     this.showResetButton();
                     this.closeAllLists(null);
